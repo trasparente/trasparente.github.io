@@ -1,0 +1,19 @@
+---
+layout: none
+permalink: /search.json
+---
+
+[
+    {% for post in site.posts %}
+        {% if post.layout == 'post' %}
+            {
+                "title"     : "{{ post.title }}",
+                "url"       : "{{ post.url }}",
+                "date"      : "{{ post.date | date: "%e %B %Y" }}",
+                "tags"      : "{% for tags in post.tags %}{{ tags }}{% if forloop.last %}{% else %}, {% endif %}{% endfor %}",
+                "excerpt"   : "{{ post.excerpt | strip_html }}",
+                "category"  : "{{ post.category }}"
+            } {% if forloop.last %}{% else %},{% endif %}
+        {% endif %}
+    {% endfor %}
+]

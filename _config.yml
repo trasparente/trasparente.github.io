@@ -1,0 +1,18 @@
+url: 
+name: trasparente
+title: trasparente homepage
+description: yet another jekyll boilerplate
+
+# CSS THEMES in folder /assets/css/
+css: [ 'normalize.css', 'font/gloriola.css', 'pygments.css', 'base.css' ]
+
+# SCRIPTS in folder /assets/js/
+script: [ 'jquery-1.10.1.min.js', 'base.js' ]
+
+# JEKYLL
+excerpt_separator: "\n\n"
+baseurl: /
+markdown: rdiscount
+pygments: true
+relative_permalinks: false
+permalink: /:categories/:title

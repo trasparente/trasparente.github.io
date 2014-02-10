@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{{ site.name }} | {{ page.title }}</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{% if page.description %}{{ page.description}}{% else %}{{ site.description }}{% endif %}">
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+  {% for css in site.css %}
+    <link rel="stylesheet" href="/assets/css/{{ css }}" />
+  {% endfor %}
+  {% for css in page.css %}
+    <link rel="stylesheet" href="/assets/css/{{ css }}" />
+  {% endfor %}
+<!-- <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" rel="stylesheet" type="text/css"> -->
+  {% for script in site.script %}
+    <script src="/assets/js/{{ script }}"></script>
+  {% endfor %}
+  {% for script in page.script %}
+    <script src="/assets/js/{{ script }}"></script>
+  {% endfor %}
+</head>
+<body class="{{ page.layout }}">
+	<header>
+    <div>
+      <h1><a href="/">{{ site.name }}</a></h1>
+      <h2>{{ site.description }}</h2>
+    </div>
+	</header>
+  <nav>
+    <ul>
+      {% for menu in site.data.menu %}
+      <li><a href="{{ menu.url }}" title="{{ menu.description }}">{{ menu.name }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+	<section>
