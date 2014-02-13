@@ -8,6 +8,7 @@ trasparente.github.io
 * post folder: https://github.com/trasparente/trasparente.github.io/tree/master/_posts
 * http://jekyllrb.com/
 * https://github.com/Shopify/liquid/wiki/Liquid-for-Designers
+* less compiler: http://lesstester.com/
 
 SETUP
 -----
